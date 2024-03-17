@@ -5,18 +5,11 @@ import {
   GroupBase,
   SelectComponentsConfig,
 } from "chakra-react-select";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { AddIcon, CloseIcon, CheckIcon } from "@chakra-ui/icons";
 import { Spinner } from "@chakra-ui/react";
 
 import "./CustomForm.css";
-
-const defaultValue = [
-  { tech: "Java" },
-  { tech: "Python" },
-  { tech: "CPP" },
-  { tech: "C#" },
-];
 
 const defaultOptions = [
   { value: "male", label: "Male", color: "white" },
@@ -24,13 +17,22 @@ const defaultOptions = [
   { value: "other", label: "Other" },
 ];
 
+interface IForm {
+  firstName: string;
+  lastName: string;
+  gender: string;
+  dateOfBirth: string;
+  techStack: string;
+  techList: any[];
+}
+
 function CustomForm() {
   const [showSubmittedScreen, setShowSubmittedScreen] = useState(false);
-  const [submittedData, setSubmittedData] = useState({});
+  const [submittedData, setSubmittedData] = useState<any>({});
   const [showLoading, setShowLoading] = useState(false);
 
   const customComponents: SelectComponentsConfig<true, GroupBase> = {
-    Option: ({ children, ...props }) => (
+    Option: ({ children, ...props }: any) => (
       <chakraComponents.Option {...props}>
         <div
           style={{
@@ -56,7 +58,7 @@ function CustomForm() {
     setValue,
     getValues,
     formState: { errors },
-  } = useForm({
+  } = useForm<IForm>({
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -105,7 +107,7 @@ function CustomForm() {
           </div>
           <div className="info-container">
             <label>Tech Stack: </label>
-            {submittedData.techList.map((tech, i) => (
+            {submittedData.techList.map((tech: string, i: number) => (
               <h4>
                 {tech}
                 {(submittedData.techList.length - 1 != i) && ","}
