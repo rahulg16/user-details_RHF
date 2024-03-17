@@ -1,0 +1,150 @@
+form {
+  background-color: #f0ebeb;
+  max-width: 40vw;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form-Basic-details,
+.form-other-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.genderSelect {
+  width: 80%;
+  background-color: #d7d7d7;
+  border-radius: 10px;
+}
+
+.form-element {
+  flex: 1;
+}
+
+.form-tech-stack > div > input {
+  width: 60%;
+}
+.form-tech-list {
+  max-height: 200px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+h1.title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000000;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
+}
+
+.form {
+  background: #0e101c;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+p {
+  color: #bf1650;
+}
+
+p::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 90%;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: #d7d7d7;
+  font-weight: bolder;
+  color: white;
+}
+
+input::placeholder {
+  color: #ebebeb;
+  opacity: 1; /* Firefox */
+  font-size: 18px;
+}
+
+input::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #ebebeb;
+  font-size: 18px;
+}
+
+label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input:disabled {
+  opacity: 0.4;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+.submit-btn {
+  width: 100px;
+  border-radius: 10;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: #9fa7b3 !important;
+}
+
+.tech-stack_header {
+  /* border: 2px solid green; */
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech-stack_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  background-color: #d7d7d7;
+  font-weight: bolder;
+  color: white;
+  padding: 6px 8px 6px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tech-stack_list > h2 {
+  width: 80%;
+}
+
+.info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info-container > h4 {
+  margin-left: 5px;
+  margin-top: 8px;
+}
